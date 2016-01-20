@@ -10,7 +10,7 @@ Docker image of a Slack bot that enables remote execution of Ansible commands in
 2. Build the image or pull [the official one](https://hub.docker.com/r/lekum/ansiblebot/)
 3. Run a container using the image, setting the appropriate value for the environment variable `SLACK_API_TOKEN`
 
-In addition, if you want any file to be used by Ansible, you may map the directory `/opt/bot/` to your host. That way, you can pass an inventory or `ansible.cfg` file, for example.
+In addition, if you want any file to be used by Ansible, you may map that file inside the directory `/opt/bot/` of the container. That way, you can pass an inventory or `ansible.cfg` file, for example.
 
 ## Important disclaimer
 
