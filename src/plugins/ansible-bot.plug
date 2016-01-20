@@ -1,0 +1,9 @@
+[Core]
+Name = Ansible
+Module = ansible-bot
+
+[Python]
+Version = 2+
+
+[Documentation]
+Description = "Plugin for remotely execute Ansible one-liner commands"
