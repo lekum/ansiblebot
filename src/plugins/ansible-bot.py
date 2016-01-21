@@ -9,4 +9,4 @@ class AnsibleBot(BotPlugin):
         """Run one-time Ansible commands"""
         cmd = " ".join(("venv/bin/ansible", args))
         prefix = "".join(("Executing `ansible ", args, "`:"))
-        return "\n\n\n\n".join((prefix, check_output(cmd, shell=True)))
+        return "\n".join((prefix, check_output(cmd, shell=True)))
