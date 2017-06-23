@@ -1,12 +1,11 @@
-FROM ubuntu:14.04
-MAINTAINER Alejandro Guirao <lekumberri@gmail.com>
-ENV REFRESHED_AT 2016-01-20
-
-RUN mkdir -p /opt/bot
-WORKDIR /opt/bot
+FROM python:3
+LABEL maintainer Alejandro Guirao <lekumberri@gmail.com>
+ENV REFRESHED_AT 2017-06-23
+# Set the locale
+RUN apt-get update && apt-get install -y -qq libffi-dev libssl-dev openssh-client
+WORKDIR /opt/bot/
 RUN mkdir -p data
-RUN apt-get update && apt-get install -y -qq python-virtualenv python-dev libffi-dev libssl-dev openssh-client
-RUN virtualenv venv
-COPY src /opt/bot
-RUN venv/bin/pip install -r requirements.txt
-CMD ["venv/bin/errbot"]
+COPY src/requirements.txt .
+RUN pip install -r requirements.txt
+COPY src .
+CMD ["errbot"]
