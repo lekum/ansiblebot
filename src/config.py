@@ -13,7 +13,7 @@ BOT_LOG_LEVEL = logging.INFO
 
 
 BOT_ADMINS = ('gbin@localhost',)
-CHATROOM_PRESENCE = ('example',)
+CHATROOM_PRESENCE = ()
 BOT_PREFIX = '!'
 DIVERT_TO_PRIVATE = ()
 CHATROOM_RELAY = {}
