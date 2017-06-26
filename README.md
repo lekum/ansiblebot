@@ -12,6 +12,10 @@ Docker image of a Slack bot that enables remote execution of Ansible commands in
 
 In addition, if you want any file to be used by Ansible, you may map that file inside the directory `/opt/bot/` of the container. That way, you can pass an inventory, ssh private keys or `ansible.cfg` file, for example.
 
+In order to launch the commands, just type `!ansible` in the Slack channel in which the bot has been invited, followed by the rest of the command as you would do locally:
+
+![screenshot](/images/bot.png)
+
 ## Important disclaimer
 
 Using this bot exposes your host to the users of the Slack channel (it may be a good idea to create a private channel for it). In addition, the internal usage of Python's `subprocess.check_output` with `shell=True` may pose security threats. Use at your own responsibility. 
